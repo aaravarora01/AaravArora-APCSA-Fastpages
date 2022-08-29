@@ -24,10 +24,10 @@
   
     
         ,"post2": {
-            "title": "Unit1 Notes",
-            "content": "",
-            "url": "https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/2022/08/26/unit1-notes.html",
-            "relUrl": "/2022/08/26/unit1-notes.html",
+            "title": "Unit 1 CB Notes",
+            "content": "What does this contain? . It has all the notes + ideas from Collegeboard Unit 1 for AP CSA. . Notes . Call System class methods to generate output to the console. | When creating a variable, identify the most appropraite data type for a particular specification and declare variables of the correct type to represent primitive data. | Primitives can be used to evaluate arithmetic expressions in a program code. | An aassignment state can help find what is stored in a variable. | Arithmetic expressions can use casting. | . For more details: . https://apstudents.collegeboard.org/sites/default/files/2019-05/ap-computer-science-a-course-and-exam-description.pdf .",
+            "url": "https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/markdown/collegeboard%20learning/2022/08/26/unit1-notes.html",
+            "relUrl": "/markdown/collegeboard%20learning/2022/08/26/unit1-notes.html",
             "date": " • Aug 26, 2022"
         }
         
