@@ -7,8 +7,8 @@ title: CS Alumni Panel Notes
 ---
 
 ### Event Description
-Panel: Colin, Anthony, Andrew, Mabel, Allison, Nitya
-Date: 08/29/2022
+**Panel:** Colin, Anthony, Andrew, Mabel, Allison, Nitya
+**Date: 08/29/2022**
 
 ### Getting Started and Staying with CS: 
 - Everyone faces issues, keep persevering especially at the start
@@ -27,7 +27,7 @@ Date: 08/29/2022
 - Colleges have PBL and tests
 - Some styles of project based learning work for some people
  
-### Interning
+### Interning:
 - Most interns don’t know much entering their work, you learn a lot in internships
 - Lots of problem solving logic learnt from CS applies to aspects of life
 - Technical revisions, wiring diagrams at NG
