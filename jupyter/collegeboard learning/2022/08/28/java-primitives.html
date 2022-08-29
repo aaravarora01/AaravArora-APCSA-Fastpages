@@ -507,13 +507,14 @@ I love AP CSA
     <span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span> <span class="c1">/// take user input for points scored in all games</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Enter points scored in game 1: "</span><span class="p">);</span>
     <span class="n">game1</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+    <span class="n">sum</span> <span class="o">=</span> <span class="n">game1</span><span class="p">;</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Enter points scored in game 2: "</span><span class="p">);</span>
     <span class="n">game2</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+    <span class="n">sum</span> <span class="o">+=</span> <span class="n">game2</span><span class="p">;</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Enter points scored in game 3: "</span><span class="p">);</span>
     <span class="n">game3</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+    <span class="n">sum</span> <span class="o">+=</span> <span class="n">game3</span><span class="p">;</span>
     
-    <span class="n">sum</span> <span class="o">=</span> <span class="n">game1</span> <span class="o">+</span> <span class="n">game2</span> <span class="o">+</span> <span class="n">game3</span><span class="p">;</span> <span class="c1">/// calculate total amount of points scored</span>
-
     <span class="n">average</span> <span class="o">=</span> <span class="n">sum</span> <span class="o">/</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">/// calculate average ppg</span>
     
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Average PPG is equal to "</span> <span class="o">+</span> <span class="n">average</span><span class="p">);</span> <span class="c1">/// print average ppg</span>
