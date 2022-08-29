@@ -9,7 +9,7 @@ title: APUSH Notes Ch. 1
 
 It has all the key terms from AP US History Chapter 1. 
 
-## Lists
+## Terms
 
 **Nation-State:** The form of political society that traditionally combines centralized government with a high degree of ethnic and cultural unity.
 
