@@ -37,8 +37,8 @@
         ,"post3": {
             "title": "Fastpages Python Blog Post",
             "content": "Example Python Notebook . print(&#39;Hello&#39;) . Hello .",
-            "url": "https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/fastpages/jupyter/2022/08/21/python_notebook.html",
-            "relUrl": "/fastpages/jupyter/2022/08/21/python_notebook.html",
+            "url": "https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/fastpages/jupyter/collegeboard%20learning/2022/08/21/python_notebook.html",
+            "relUrl": "/fastpages/jupyter/collegeboard%20learning/2022/08/21/python_notebook.html",
             "date": " • Aug 21, 2022"
         }
         
@@ -48,8 +48,8 @@
         ,"post4": {
             "title": "Fastpages Java Post",
             "content": "public class HelloStatic { public static void main(String[] args) { System.out.println(&quot;Hello&quot;); } } HelloStatic.main(null); . Hello! .",
-            "url": "https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/fastpages/jupyter/cb/2022/08/21/java_notebook.html",
-            "relUrl": "/fastpages/jupyter/cb/2022/08/21/java_notebook.html",
+            "url": "https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/fastpages/jupyter/collegeboard%20learning/2022/08/21/java_notebook.html",
+            "relUrl": "/fastpages/jupyter/collegeboard%20learning/2022/08/21/java_notebook.html",
             "date": " • Aug 21, 2022"
         }
         
