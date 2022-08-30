@@ -44,6 +44,9 @@ title: CS Alumni Panel Notes
 - Take computer science seriously and it’ll take you over
 - Work on personal project, pursue your own opportunities because they look great on a resume (graph theory, data visualization)
 
+### My Thoughts:
+I really enjoyed the lesson. I'm very interested in the field of Computer Science and I think it'd be a great opportunity to pursue in the future. Since I am just getting started with AP CSA, I think that it's definitely difficult but I have been able to apply my previous knowledge to what I'm working on and I'm confident that what I learn in this class will apply to anything I do later on in life even if it doesn't directly pertain to Computer Science. I was inspired by the panel members to perservere and stick with things in the class and I am confident that I can learn a lot throughout this entire class. I have a better understanding of what I would want to pursue in the future and I am really glad that I got to learn from the panel members. I have ideas for a possible personal project that I'd want to pursue and I am further inspired to work towards it because of the panel session today. 
+
 ## Footnotes
 
 [^1]: Any questions? Feel free to reach out!
