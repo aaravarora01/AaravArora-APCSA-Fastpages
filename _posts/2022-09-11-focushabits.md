@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: My Notes on the Harvard Video + Thoughts and Hacks
-categories: [markdown], [pbl]
+categories: [markdown]
 title: Focus and Habits
 ---
 
