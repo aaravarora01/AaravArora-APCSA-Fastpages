@@ -6,7 +6,7 @@ categories: [markdown]
 title: Focus and Habits
 ---
 
-### Notes from the Video w/ Feedback ###
+### Notes from the Video with Feedback ###
 
 - Well being and mental health on college campuses is often at risk, but it matters
 - Many students find themselves being too stressed to enjoy out on school and the memories they make
