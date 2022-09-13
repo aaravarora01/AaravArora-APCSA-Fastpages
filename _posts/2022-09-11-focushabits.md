@@ -23,7 +23,9 @@ I enjoyed the video and thought that Professor Santos spoke well about ways that
 
 ### Note of Gratitude ###
 
-Thank you to my family for always supporting me and giving me advice. I am inspired by them everyday.
+To my family,
+
+Thank you to for always supporting me and giving me advice. I am inspired by all of you every single day. I am so thankful for all the help you provide me and I am fortunate to live the life that I currently do.
 
 ### Things I am Grateful For ###
 
