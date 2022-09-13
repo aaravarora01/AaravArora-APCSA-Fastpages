@@ -42,6 +42,12 @@ Thank you to for always supporting me and giving me advice. I am inspired by all
 
 ### My Interests ###
 
+Interests
 - Computer Science
 - Programming
 - Going for Hikes/Walks
+- Java
+
+Skills
+- Python
+- Learning new things
