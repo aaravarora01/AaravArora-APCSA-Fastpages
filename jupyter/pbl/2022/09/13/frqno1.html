@@ -209,18 +209,14 @@ year1 and year2, inclusive.</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">LeapYearAmount</span><span class="p">;</span>  <span class="c1">// defines the variables we'll use in this </span>
-<span class="kt">int</span> <span class="n">year</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">year</span><span class="p">;</span> <span class="c1">// defines the variable we're using for each year</span>
 <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">numberOfLeapYears</span><span class="p">(</span><span class="kt">int</span> <span class="n">year1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year2</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">year1</span> <span class="o">&lt;=</span> <span class="n">year</span> <span class="o">&amp;&amp;</span> <span class="n">year</span> <span class="o">&lt;=</span> <span class="n">year2</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// for each year between year 1 and year 2</span>
+    <span class="kt">int</span> <span class="n">LeapYearAmount</span><span class="p">;</span>  <span class="c1">// defines the variable we're using to count the leap year amount</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">year</span> <span class="o">=</span> <span class="n">year1</span><span class="p">;</span> <span class="n">year</span> <span class="o">&lt;=</span> <span class="n">year2</span><span class="p">;</span> <span class="n">year</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// for each year between year 1 and year 2</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">isLeapYear</span><span class="p">(</span><span class="n">year</span><span class="p">))</span> <span class="p">{</span> <span class="c1">// if the year is a leap year, add one to the count</span>
             <span class="n">LeapYearAmount</span><span class="o">+=</span><span class="mi">1</span><span class="p">;</span>
         <span class="p">}</span>
-        <span class="k">else</span> <span class="p">{</span> <span class="c1">// otherwise, continue</span>
-            <span class="k">break</span><span class="p">;</span>
-        <span class="p">}</span>
-
     <span class="p">}</span>
 
 <span class="p">}</span>
@@ -256,9 +252,9 @@ returns 6.</p>
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">dayOfWeek</span><span class="p">(</span><span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="kt">int</span> <span class="n">day</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="c1">// calls the method to find the day of the week</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">DayFirst</span> <span class="o">=</span> <span class="n">firstDayOfYear</span><span class="p">(</span><span class="n">year</span><span class="p">);</span> <span class="c1">// finds what the first day of the year is for the given year</span>
-    <span class="kt">int</span> <span class="n">DaysAfter</span> <span class="o">=</span> <span class="n">dayOfYear</span><span class="p">(</span><span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="kt">int</span> <span class="n">day</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">);</span> <span class="c1">// finds how many days after the start of the year</span>
+    <span class="kt">int</span> <span class="n">DaysAfter</span> <span class="o">=</span> <span class="n">dayOfYear</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span><span class="p">);</span> <span class="c1">// finds how many days after the start of the year</span>
     <span class="kt">int</span> <span class="n">CalculatedDay</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="n">DayFirst</span> <span class="o">+</span> <span class="kt">int</span> <span class="n">DaysAfter</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">// adds the amount to the first day and subtracts 1</span>
-    <span class="kt">int</span> <span class="n">DayWeekReturn</span> <span class="o">=</span> <span class="n">Calculated</span> <span class="n">Day</span> <span class="o">%</span> <span class="mi">7</span><span class="p">;</span> <span class="c1">// changes from a number to a value 0-6 that gives the day of the week</span>
+    <span class="kt">int</span> <span class="n">DayWeekReturn</span> <span class="o">=</span> <span class="kt">int</span> <span class="n">CalculatedDay</span> <span class="o">%</span> <span class="mi">7</span><span class="p">;</span> <span class="c1">// changes from a number to a value 0-6 that gives the day of the week</span>
     <span class="k">return</span> <span class="n">DayWeekReturn</span><span class="p">;</span> <span class="c1">// returns the day of the week</span>
 <span class="p">}</span>
 </pre></div>
