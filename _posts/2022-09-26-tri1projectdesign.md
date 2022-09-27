@@ -23,7 +23,13 @@ author: Aarav Arora, Braeden Copley, Tigran Arakelov, Vunsh Mehta
 
 ## Wire Frame ##
 
+![wireframe](https://user-images.githubusercontent.com/45216129/192446869-fffe65da-5fda-455c-b056-3c05283ff0d8.png)
+
+<img width="569" alt="Screenshot 2022-09-26 231253" src="https://user-images.githubusercontent.com/45216129/192446927-97e31b0b-db73-4177-b299-b254b074ffea.png">
+
 ## Modeling ##
+
+![Untitled drawing](https://user-images.githubusercontent.com/45216129/192446741-7ecf2357-cd6d-4903-ae46-0aebe3c4618e.png)
 
 # Baseline Project Goals #
 - Create an online tool that has flashcards and a way to test yourself in an MC format
