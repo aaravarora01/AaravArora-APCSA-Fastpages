@@ -201,12 +201,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.net.URI</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.net.http.HttpClient</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.net.http.HttpRequest</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.net.http.HttpResponse</span><span class="p">;</span>
-
-<span class="n">HttpRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="n">HttpRequest</span><span class="p">.</span><span class="na">newBuilder</span><span class="p">()</span>
+<div class=" highlight hl-java"><pre><span></span><span class="n">HttpRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="n">HttpRequest</span><span class="p">.</span><span class="na">newBuilder</span><span class="p">()</span>
 		<span class="p">.</span><span class="na">uri</span><span class="p">(</span><span class="n">URI</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="s">"https://stockexchangeapi.p.rapidapi.com/price/AAPL"</span><span class="p">))</span>
 		<span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="s">"X-RapidAPI-Key"</span><span class="p">,</span> <span class="s">"8a72a745admsh4f6260fd91442a9p17d011jsn6dc5cd0e2605"</span><span class="p">)</span>
 		<span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="s">"X-RapidAPI-Host"</span><span class="p">,</span> <span class="s">"stockexchangeapi.p.rapidapi.com"</span><span class="p">)</span>
