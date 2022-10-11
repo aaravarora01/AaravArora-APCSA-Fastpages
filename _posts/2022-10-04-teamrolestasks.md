@@ -9,12 +9,12 @@ author: Aarav Arora, Braeden Copley, Tigran Arakelov, Vunsh Mehta
 
 # Team Roles #
 - Aarav Arora: Scrum Master
-- Braeden Copley: Frontend Developer
-- Tigran Arakelov: DevOps
+- Braeden Copley: DevOps
+- Tigran Arakelov: Frontend Developer
 - Vunsh Mehta; Backend Developer
 
 # Tasks #
-- Aarav: Work on API Implementation on Team Site and Fix Deployment for Team
+- Aarav: Work on API Implementation on Team Site and Fix Deployment for Team, Find APIs for Quizzes
 
 - Braeden: Research APIs that can be used for the site
 
