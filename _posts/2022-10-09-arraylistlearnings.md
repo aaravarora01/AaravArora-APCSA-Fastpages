@@ -27,5 +27,4 @@ Java uses the notion of a list too. It defines the interface List which is in th
 
 - There are actually two different add methods in the List interface. The add(obj) method adds the passed object to the end of the list. The add(index,obj) method adds the passed object at the passed index, but first moves over any existing values to higher indicies to make room for the new object.
 
-- Declare an array using type[] name. Examples are shown below.
-
+- Declare an array using type[] name.
