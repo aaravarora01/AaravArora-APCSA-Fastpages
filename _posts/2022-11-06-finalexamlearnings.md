@@ -64,6 +64,7 @@ public int recur(int n) {
     else
         return recur(recur(n/3));
 }
+```
 
 What value is returned as a result of the call recur(27)?
 
