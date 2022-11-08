@@ -122,4 +122,4 @@ https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/jupyter/2022/10/23/wri
 
 ### HW ###
 
-
+https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/jupyter/2022/11/08/arrays.html
