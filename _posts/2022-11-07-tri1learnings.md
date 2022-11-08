@@ -33,8 +33,12 @@ https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/jupyter/2022/10/16/pri
 
 ### Notes ###
 
--  
-
+- Java is an OOP language that compartmentalizes data and functions to bound them together
+- Classes are templates from which objects are created, objects are instances of classes
+- Syntax for creating a class is Painter myPainter = new Painter();
+- Method declaration has 6 components: access modifier, return type, method name, parameter list, exception list, method body
+- Calling method: methodName(parameter1, parameter2);
+- Calling object's method: objectReference.methodName(parameter1, parameter2);
 
 ### HW ###
 
