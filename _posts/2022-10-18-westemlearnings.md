@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Notes and Reflection from WE STEM Event
-categories: [markdown, pbl]
+categories: [markdown]
 title: WE STEM Event Notes
 author: Aarav Arora
 ---
