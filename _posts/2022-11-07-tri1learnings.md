@@ -11,7 +11,16 @@ author: Aarav Arora
 
 ### Notes ###
 
--  
+-  Java has simple syntax
+- Automatic garbage collection
+- Multithreading
+- Boolean, int, double, char, float, long, others
+- Variable Naming: Lettrers/numbers, no special characters
+- addition, subtraction, division, modulus, multiplication
+- Compound operators
+- Both must be attached to a variable
+
+Review Activity/Game
 
 
 ### HW ###
