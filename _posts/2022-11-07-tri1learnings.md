@@ -49,7 +49,19 @@ https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/jupyter/2022/10/16/pri
 
 ### Notes ###
 
--  
+-  Big part of AP test
+- Most FRQs and MC have some if or if else statements
+- Switch case
+- Booleans are important
+- If statement is a conditional where something runs if it's true
+- If/else is similar to if but it has an option for something to happen if the if statement is not met
+- If else if allows you to create many options for something to occur
+- Switch statement adds efficiency and can switch the code using a control flow statement
+- Boolean expressions return true or false based on the condition
+- Logic Gates
+- DeMorgan's Law:(not(A and B)) is equal to (not A or not B)
+- (not(A or B)) is equal to (not A and not B)
+- (not(A and B)) is not equal to (not A and not B)
 
 
 ### HW ###
