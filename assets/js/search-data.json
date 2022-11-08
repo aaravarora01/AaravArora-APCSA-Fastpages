@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Arrays FRQ",
-            "content": "public static boolean ArrayMethods(int[] values) { for (int i = 0; i &lt; values.length - 1; i++) { if (a[i] &gt; a[i + 1]) { return false; } } return true; } .",
+            "content": "public static boolean ArrayMethods(int[] values) { for (int i = 0; i &lt; values.length - 1; i++) { if (a[i] &gt; a[i + 1]) { return false; } } return true; } . public class ArrayMethods(int[] values) { for (int i = 0; i &lt; values.length; i++) { for (int j = i + 1 ; j &lt; values.length; j++) { if (values[i].equals(values[j])) { return true; } else { return true; } } } } .",
             "url": "https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/jupyter/2022/11/08/arrays.html",
             "relUrl": "/jupyter/2022/11/08/arrays.html",
             "date": " • Nov 8, 2022"
