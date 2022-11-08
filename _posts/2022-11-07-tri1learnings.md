@@ -80,7 +80,20 @@ Slideshow Link: https://docs.google.com/presentation/d/12KvdRV2MIBkEkEN29gwN7ypV
 
 ### Notes ###
 
--  
+-  Essential aspect of OOP
+- Models real world objects
+- Object: state, attributes, behavior (instance of class)
+- Represented by instance in the program 
+- Class defines abstract data type, object references, instance variables
+- Methods: behaviors or actions that apply to objects, constructors create the object
+- Main Method tests the class, intsance variables --> attributes, fields, projects
+- Constructors are a special method for object instantiation, default constructor, multiple constructors per class
+- Comments can be added, preconditions for what must be true before code is implemented and postcondition about what should be true after the method is run
+- Accessor and mutator methods
+- 3 parts to writing methods: method definition, method signature, method body
+- Method return types: string, int, boolean, object type, void
+- Static modifier, this, access modifier
+- Three levels of scope: class level, method level, block level
 
 
 ### HW ###
