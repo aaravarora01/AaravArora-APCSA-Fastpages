@@ -1,9 +1,9 @@
 ---
 toc: true
 layout: post
-description: Lesson Notes for Units 1-6 + Homework
+description: Lesson Notes for Units 1-5 + Homework
 categories: [markdown, CollegeBoard Learning]
-title: Tri 1 AP CSA Lesson Learnings
+title: Units 1 to 5 Blogs
 author: Aarav Arora
 ---
 
