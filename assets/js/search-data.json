@@ -13,10 +13,10 @@
   
     
         ,"post1": {
-            "title": "Title",
+            "title": "Array List HW",
             "content": "Hack 1 . // HACK!!!! // Create an arrayList and use one of the cool methods for it import java.util.ArrayList; public class hack1 { public static void main (String[] args) { ArrayList&lt;Integer&gt; hacklist = new ArrayList&lt;Integer&gt;(); hacklist.add(1); hacklist.add(2); hacklist.add(3); for (int each : hacklist) { System.out.println(each); } } } hack1.main(null); . 1 2 3 . Hack 2 . import java.util.ArrayList; ArrayList&lt;String&gt; color = new ArrayList&lt;String&gt;(); color.add(&quot;red apple&quot;); color.add(&quot;green box&quot;); color.add(&quot;blue water&quot;); color.add(&quot;red panda&quot;); for (int i = 0; i&lt;color.size(); i++) { if (color.get(i).contains(&quot;red&quot;)) { color.remove(i); } } System.out.println(color); . [green box, blue water] . Hack 3 . ArrayList&lt;Integer&gt; num = new ArrayList&lt;Integer&gt;(); num.add(5); num.add(1); num.add(3); int sum = 0; for (int i : num){ sum += i; } System.out.println(sum); . 9 . Quizizz: . https://user-images.githubusercontent.com/45216129/205480582-a8484204-84cf-462b-a49c-37c73f486858.png .",
-            "url": "https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/2022/12/03/arraylisthw.html",
-            "relUrl": "/2022/12/03/arraylisthw.html",
+            "url": "https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/jupyter/collegeboard%20learning/2022/12/03/arraylisthw.html",
+            "relUrl": "/jupyter/collegeboard%20learning/2022/12/03/arraylisthw.html",
             "date": " • Dec 3, 2022"
         }
         
