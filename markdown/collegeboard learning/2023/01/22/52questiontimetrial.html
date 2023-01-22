@@ -105,10 +105,10 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#overall">Overall</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#question-6">Question 6</a></li>
-<li class="toc-entry toc-h3"><a href="#question-23">Question 23</a></li>
-<li class="toc-entry toc-h3"><a href="#question-29">Question 29</a></li>
-<li class="toc-entry toc-h3"><a href="#question-30">Question 30</a></li>
+<li class="toc-entry toc-h3"><a href="#question-7">Question 7</a></li>
 <li class="toc-entry toc-h3"><a href="#question-39">Question 39</a></li>
+<li class="toc-entry toc-h3"><a href="#question-40">Question 40</a></li>
+<li class="toc-entry toc-h3"><a href="#question-48">Question 48</a></li>
 </ul>
 </li>
 </ul><h1 id="overall">
@@ -119,66 +119,39 @@ window.onload = wrap_img;
 <h3 id="question-6">
 <a class="anchor" href="#question-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 6</h3>
 
-<p>Consider the following instance variable and methods. You may assume that data has been initialized with length &gt; 0. The methods are intended to return the index of an array element equal to target, or -1 if no such element exists.</p>
-
-<p>For which of the following test cases will the call seqSearchRec(5) always result in an error?
-I. data contains only one element.
-II. data does not contain the value 5.
-III. data contains the value 5 multiple times.</p>
+<p><img src="https://user-images.githubusercontent.com/45216129/213906466-f0481879-e0bc-4053-929b-871d9cac7282.png" alt="image"></p>
 
 <ul>
-  <li>I chose I only which is incorrect since I will return the correct value of target and 0. The correct answer is II only since it will cause an ArrayIndexOutOfBoundsException since a negative value is entered into the array.</li>
+  <li>I chose the option for The row index of an element with the largest value in the two-dimensional array, but the correct answer was the one for the column index. The algorithm uses a for-each loop to traverse the rows, so the row index is not being stored and instead I realized that the column index is being stored in this question.</li>
 </ul>
 
-<h3 id="question-23">
-<a class="anchor" href="#question-23" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 23</h3>
+<h3 id="question-7">
+<a class="anchor" href="#question-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 7</h3>
 
-<p>Consider the following instance variable and method.</p>
+<p><img src="https://user-images.githubusercontent.com/45216129/213906517-697869a9-f76b-4c65-a9cf-0fd1a638546c.png" alt="image"></p>
 
-<p>Assume that animals has been instantiated and initialized with the following contents.</p>
-
-<p>What will the contents of animals be as a result of calling manipulate?</p>
-
-<p>I chose answer E because I forgot to account for the fact that k is equal to the size of the array of animals minus 1, which if I had accounted for, I would have gotten the correct answer of B. In the future, I’ll make sure to read questions over again to make sure that I properly understand what the question is asking for especially on difficult questions.</p>
-
-<h3 id="question-29">
-<a class="anchor" href="#question-29" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 29</h3>
-
-<p>Consider the following code segment.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for (int k = 1; k &lt;=100; k++)
-    if ((k % 4) == 0)
-        System.out.printn(k);
-</code></pre></div></div>
-
-<p>Which of the following code segments will produce the same output as the code segment above?</p>
-
-<p>I chose answer D which is incorrect since it will only multiply by 4 which will print out 4, 16, 64. However, the correct answer is B since it will print 1, 5, 9, 13, etc which is the same as the initial code segment.</p>
-
-<h3 id="question-30">
-<a class="anchor" href="#question-30" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 30</h3>
-
-<p>Consider the following method.</p>
-
-<p>What value is returned as a result of the call scramble(“compiler”, 3)?</p>
-
-<p>I choes answer B which was in correct; the correct answer is C. Answer B would be correct if the first call to substring was word.substring(howFar, word.length()). The reason why C is correct is because the class above doesn’t use the first character so the correct answer is “ilercom”, not “pilercom”</p>
+<p>I chose answer C because I accounted for the question having a 1 at the end of each string, when there was actually a 0 at the end of each string. I should’ve been more careful in reading this question and chosen the option with a 0 at the end.</p>
 
 <h3 id="question-39">
 <a class="anchor" href="#question-39" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 39</h3>
-<p>Consider the following recursive method.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public int recur(int n) {
-    if (n &lt;= 10)
-        return n * 2;
-    else
-        return recur(recur(n/3));
-}
-</code></pre></div></div>
+<p><img src="https://user-images.githubusercontent.com/45216129/213906545-e852f0f5-fe1f-4a6a-a44b-021776caacc2.png" alt="image"></p>
 
-<p>What value is returned as a result of the call recur(27)?</p>
+<p>I chose the answer that the code segment returns a list with fewer elements than intended because it fails to consider the last element of myList. However, this option is incorrect because the code segment returns a list with the right amount of elements intended because it has a for loop that continuously checks. The actual mistake is that the code segment skips some elements of myList because the indexes of all subsequent elements change by one when a list element is removed.</p>
 
-<p>I chose answer E because I did not account for the fecond call of recur which is why I only returned the recur value for recur(27), not per what the method showed where it ran the code twice. The correct answer should’ve been 16.</p>
+<h3 id="question-40">
+<a class="anchor" href="#question-40" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 40</h3>
+
+<p><img src="https://user-images.githubusercontent.com/45216129/213906591-ff0a8ebe-fca6-4e83-9a5d-21115d463b64.png" alt="image"></p>
+
+<p>I was unsure about this question and guessed on it. However, option 3 is the only correct answer because it checks the entire list and removes elements which satisfies the conditions of the code segment.</p>
+
+<h3 id="question-48">
+<a class="anchor" href="#question-48" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 48</h3>
+
+<p><img src="https://user-images.githubusercontent.com/45216129/213906620-9e9ee0c5-9c31-4893-b2f5-25d0bea4f2a2.png" alt="image"></p>
+
+<p>I chose answer E for this question which was incorrect. The code segment uses an enhanced for loop to traverse the valueList array. The statement inside the loop calls the getNum method to access the num instance variable. Thus, option three cannot be correct. The code segment causes a compilation error because the getNum method must be called using the dot operator, not by passing the object reference as an argument.</p>
 
   </div><a class="u-url" href="/AaravArora-APCSA-Fastpages/markdown/collegeboard%20learning/2023/01/22/52questiontimetrial.html" hidden></a>
 </article>
