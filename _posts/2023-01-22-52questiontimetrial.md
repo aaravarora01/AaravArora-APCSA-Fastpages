@@ -9,6 +9,10 @@ author: Aarav Arora
 
 # Overall #
 
+
+Time: 93 minutes
+Score: 47/52
+
 I scored 47/52 on this exam which I think is a good score and I know what specific areas I need to work on throughout the year. I think that I have a good understanding of most areas but need a bit more review with 2D arrays and array lists. These are areas where I plan to do more practice MCs and study more in the future.
 
 ### Question 6 ###
