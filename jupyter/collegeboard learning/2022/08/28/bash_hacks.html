@@ -1,61 +1,76 @@
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Bash Hacks | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Bash Hacks" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bash Security &amp; Installations" />
+<meta property="og:description" content="Bash Security &amp; Installations" />
+<link rel="canonical" href="https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/jupyter/collegeboard%20learning/2022/08/28/bash_hacks.html" />
+<meta property="og:url" content="https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/jupyter/collegeboard%20learning/2022/08/28/bash_hacks.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-08-28T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bash Hacks" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-28T00:00:00-05:00","datePublished":"2022-08-28T00:00:00-05:00","description":"Bash Security &amp; Installations","headline":"Bash Hacks","mainEntityOfPage":{"@type":"WebPage","@id":"https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/jupyter/collegeboard%20learning/2022/08/28/bash_hacks.html"},"url":"https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/jupyter/collegeboard%20learning/2022/08/28/bash_hacks.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/AaravArora-APCSA-Fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/AaravArora-APCSA-Fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Bash Hacks</h1><p class="page-description">Bash Security & Installations</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-28T00:00:00-05:00" itemprop="datePublished">
-        Aug 28, 2022
-      </time>
-       • <span class="read-time" title="Estimated read time">
-    
-    
-      10 min read
-    
-</span></p>
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
 
-    
-      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
-      
-        <a class="category-tags-link" href="/AaravArora-APCSA-Fastpages/categories/#jupyter">jupyter</a>
-        &nbsp;
-      
-        <a class="category-tags-link" href="/AaravArora-APCSA-Fastpages/categories/#CollegeBoard Learning">CollegeBoard Learning</a>
-        
-      
-      </p>
-    
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
 
-    
-      
-        <div class="pb-5 d-flex flex-justify-center">
-          <div class="px-2">
+  <div class="wrapper"><a class="site-title" rel="author" href="/AaravArora-APCSA-Fastpages/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
 
-    <a href="https://github.com/aaravarora01/AaravArora-APCSA-Fastpages/tree/master/_notebooks/2022-08-28-bash_hacks.ipynb" role="button" target="_blank">
-<img class="notebook-badge-image" src="/AaravArora-APCSA-Fastpages/assets/badges/github.svg" alt="View On GitHub">
-    </a>
-</div>
-
-          <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/aaravarora01/AaravArora-APCSA-Fastpages/master?filepath=_notebooks%2F2022-08-28-bash_hacks.ipynb" target="_blank">
-        <img class="notebook-badge-image" src="/AaravArora-APCSA-Fastpages/assets/badges/binder.svg" alt="Open In Binder"/>
-    </a>
-</div>
-
-          <div class="px-2">
-    <a href="https://colab.research.google.com/github/aaravarora01/AaravArora-APCSA-Fastpages/blob/master/_notebooks/2022-08-28-bash_hacks.ipynb" target="_blank">
-        <img class="notebook-badge-image" src="/AaravArora-APCSA-Fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
-    </a>
-</div>
-          <div class="px-2">
-  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Faaravarora01%2FAaravArora-APCSA-Fastpages%2Fblob%2Fmaster%2F_notebooks%2F2022-08-28-bash_hacks.ipynb" target="_blank">
-      <img class="notebook-badge-image" src="/AaravArora-APCSA-Fastpages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
-  </a>
-</div>
-
-        </div>
-      </header>
-
-  <div class="post-content e-content" itemprop="articleBody">
-    <ul id="toc" class="section-nav">
-</ul><!--
+        <div class="trigger"><a class="page-link" href="/AaravArora-APCSA-Fastpages/about/">About Me</a><a class="page-link" href="/AaravArora-APCSA-Fastpages/calculator/">Calculator</a><a class="page-link" href="/AaravArora-APCSA-Fastpages/search/">Search</a><a class="page-link" href="/AaravArora-APCSA-Fastpages/categories/">Tags</a><a class="page-link" href="/AaravArora-APCSA-Fastpages/teamtodo/">Team Todo</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -64,8 +79,7 @@
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Bash Version Check</p>
 
@@ -79,7 +93,7 @@
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span><span class="nb">echo</span> <span class="s2">"</span><span class="si">${</span><span class="nv">BASH_VERSION</span><span class="si">}</span><span class="s2">"</span>
+<div class=" highlight hl-bash"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASH_VERSION</span><span class="si">}</span><span class="s2">&quot;</span>
 </pre></div>
 
     </div>
@@ -103,8 +117,7 @@
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>JS Version Check</p>
 
@@ -142,8 +155,7 @@
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Java Installation Check</p>
 
@@ -185,8 +197,7 @@ OpenJDK 64-Bit Server VM (build 11.0.16+8-post-Ubuntu-0ubuntu120.04, mixed mode,
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Python Installation Check</p>
 
@@ -226,8 +237,7 @@ Python 2.7.18
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Check Kernels:</p>
 
@@ -248,32 +258,32 @@ jupyter kernelspec list &gt; kernels.txt
 
 cat kernels.txt
 
-<span class="k">if</span> grep -Fq <span class="s2">"bash"</span> kernels.txt
+<span class="k">if</span> grep -Fq <span class="s2">&quot;bash&quot;</span> kernels.txt
 <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">"Bash is present"</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Bash is present&quot;</span>
 <span class="k">else</span>
-    <span class="nb">echo</span> <span class="s2">"Bash is not present"</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Bash is not present&quot;</span>
 <span class="k">fi</span>
 
-<span class="k">if</span> grep -Fq <span class="s2">"java"</span> kernels.txt
+<span class="k">if</span> grep -Fq <span class="s2">&quot;java&quot;</span> kernels.txt
 <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">"Java is present"</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Java is present&quot;</span>
 <span class="k">else</span>
-    <span class="nb">echo</span> <span class="s2">"Java is not present"</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Java is not present&quot;</span>
 <span class="k">fi</span>
 
-<span class="k">if</span> grep -Fq <span class="s2">"javascript"</span> kernels.txt
+<span class="k">if</span> grep -Fq <span class="s2">&quot;javascript&quot;</span> kernels.txt
 <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">"Javascript is present"</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Javascript is present&quot;</span>
 <span class="k">else</span> 
-    <span class="nb">echo</span> <span class="s2">"Javascript is not present"</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Javascript is not present&quot;</span>
 <span class="k">fi</span>
 
-<span class="k">if</span> grep -Fq <span class="s2">"python3"</span> kernels.txt
+<span class="k">if</span> grep -Fq <span class="s2">&quot;python3&quot;</span> kernels.txt
 <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">"Python is present"</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Python is present&quot;</span>
 <span class="k">else</span>
-    <span class="nb">echo</span> <span class="s2">"Python is not present"</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Python is not present&quot;</span>
 <span class="k">fi</span>
 </pre></div>
 
@@ -320,8 +330,7 @@ Python is present
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Verifying with Conda</p>
 
@@ -339,25 +348,25 @@ Python is present
 
 cat condapackages.txt
 
-<span class="k">if</span> grep -Fq <span class="s2">"bash-kernel"</span> condapackages.txt
+<span class="k">if</span> grep -Fq <span class="s2">&quot;bash-kernel&quot;</span> condapackages.txt
 <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">"Bash is present"</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Bash is present&quot;</span>
 <span class="k">else</span>
-    <span class="nb">echo</span> <span class="s2">"Bash is not present"</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Bash is not present&quot;</span>
 <span class="k">fi</span>
 
-<span class="k">if</span> grep -Fq <span class="s2">"python"</span> condapackages.txt
+<span class="k">if</span> grep -Fq <span class="s2">&quot;python&quot;</span> condapackages.txt
 <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">"Python is present"</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Python is present&quot;</span>
 <span class="k">else</span>
-    <span class="nb">echo</span> <span class="s2">"Python is not present"</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Python is not present&quot;</span>
 <span class="k">fi</span>
 
-<span class="k">if</span> grep -Fq <span class="s2">"jupyter"</span> kernels.txt
+<span class="k">if</span> grep -Fq <span class="s2">&quot;jupyter&quot;</span> kernels.txt
 <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">"Jupyter is present"</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Jupyter is present&quot;</span>
 <span class="k">else</span>
-    <span class="nb">echo</span> <span class="s2">"Jupyter is not present"</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Jupyter is not present&quot;</span>
 <span class="k">fi</span>
 </pre></div>
 
@@ -822,8 +831,7 @@ Jupyter is present
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Packages Check</p>
 
@@ -837,11 +845,11 @@ Jupyter is present
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span><span class="nb">echo</span> <span class="s2">"Which package are you checking?"</span>
+<div class=" highlight hl-bash"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;Which package are you checking?&quot;</span>
 
 <span class="nb">read</span> package
 
-<span class="c1"># Searches the system's list of packages to see if it's installed</span>
+<span class="c1"># Searches the system&#39;s list of packages to see if it&#39;s installed</span>
 dpkg -l <span class="p">|</span> grep <span class="nv">$package</span>
 </pre></div>
 
@@ -852,8 +860,7 @@ dpkg -l <span class="p">|</span> grep <span class="nv">$package</span>
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>System Updates and File Permissions - A script to automatically update system and set permissions on important system files</p>
 
@@ -873,48 +880,48 @@ sudo apt-get dist-upgrade
 sudo apt-get install bash
 sudo apt-get install --only-upgrade firefox
 
-<span class="k">if</span> <span class="o">[</span> -e <span class="s2">"/etc/passwd"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="k">if</span> <span class="o">[</span> -e <span class="s2">&quot;/etc/passwd&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
                 sudo chgrp root /etc/passwd
                 sudo chmod <span class="m">0644</span> /etc/passwd
-                <span class="nb">echo</span> -e <span class="s2">"/etc/passwd - </span><span class="si">${</span><span class="nv">LG</span><span class="si">}</span><span class="s2">done </span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">"</span>
+                <span class="nb">echo</span> -e <span class="s2">&quot;/etc/passwd - </span><span class="si">${</span><span class="nv">LG</span><span class="si">}</span><span class="s2">done </span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span>
         <span class="k">else</span>
-                <span class="nb">echo</span> -e <span class="s2">"/etc/passwd - </span><span class="si">${</span><span class="nv">LR</span><span class="si">}</span><span class="s2">does not exist</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">"</span>
+                <span class="nb">echo</span> -e <span class="s2">&quot;/etc/passwd - </span><span class="si">${</span><span class="nv">LR</span><span class="si">}</span><span class="s2">does not exist</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="k">fi</span>
 
 <span class="c1">#/etc/group</span>
-<span class="k">if</span> <span class="o">[</span> -e <span class="s2">"/etc/group"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="k">if</span> <span class="o">[</span> -e <span class="s2">&quot;/etc/group&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
                 sudo chgrp root /etc/group
                 sudo chmod <span class="m">0644</span> /etc/group
-                <span class="nb">echo</span> -e <span class="s2">"/etc/group - </span><span class="si">${</span><span class="nv">LG</span><span class="si">}</span><span class="s2">done </span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">"</span>
+                <span class="nb">echo</span> -e <span class="s2">&quot;/etc/group - </span><span class="si">${</span><span class="nv">LG</span><span class="si">}</span><span class="s2">done </span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span>
         <span class="k">else</span>
-                <span class="nb">echo</span> -e <span class="s2">"/etc/group - </span><span class="si">${</span><span class="nv">LR</span><span class="si">}</span><span class="s2">does not exist</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">"</span>
+                <span class="nb">echo</span> -e <span class="s2">&quot;/etc/group - </span><span class="si">${</span><span class="nv">LR</span><span class="si">}</span><span class="s2">does not exist</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="k">fi</span>
 
 <span class="c1">#/etc/shadow</span>
-<span class="k">if</span> <span class="o">[</span> -e <span class="s2">"/etc/shadow"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="k">if</span> <span class="o">[</span> -e <span class="s2">&quot;/etc/shadow&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
                 sudo chmod <span class="m">0000</span> /etc/shadow
                 sudo chgrp root /etc/shadow
-                <span class="nb">echo</span> -e <span class="s2">"/etc/shadow - </span><span class="si">${</span><span class="nv">LG</span><span class="si">}</span><span class="s2">done </span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">"</span>
+                <span class="nb">echo</span> -e <span class="s2">&quot;/etc/shadow - </span><span class="si">${</span><span class="nv">LG</span><span class="si">}</span><span class="s2">done </span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span>
         <span class="k">else</span>
-                <span class="nb">echo</span> -e <span class="s2">"/etc/shadow - </span><span class="si">${</span><span class="nv">LR</span><span class="si">}</span><span class="s2">does not exist</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">"</span>
+                <span class="nb">echo</span> -e <span class="s2">&quot;/etc/shadow - </span><span class="si">${</span><span class="nv">LR</span><span class="si">}</span><span class="s2">does not exist</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="k">fi</span>
 
 <span class="c1">#/etc/gshadow</span>
-<span class="k">if</span> <span class="o">[</span> -e <span class="s2">"/etc/gshadow"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="k">if</span> <span class="o">[</span> -e <span class="s2">&quot;/etc/gshadow&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
                 sudo chmod <span class="m">0000</span> /etc/gshadow
                 sudo chgrp root /etc/gshadow
-                <span class="nb">echo</span> -e <span class="s2">"/etc/gshadow - </span><span class="si">${</span><span class="nv">LG</span><span class="si">}</span><span class="s2">done </span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">"</span>
+                <span class="nb">echo</span> -e <span class="s2">&quot;/etc/gshadow - </span><span class="si">${</span><span class="nv">LG</span><span class="si">}</span><span class="s2">done </span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span>
         <span class="k">else</span>
-                <span class="nb">echo</span> -e <span class="s2">"/etc/gshadow - </span><span class="si">${</span><span class="nv">LR</span><span class="si">}</span><span class="s2">does not exist</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">"</span>
+                <span class="nb">echo</span> -e <span class="s2">&quot;/etc/gshadow - </span><span class="si">${</span><span class="nv">LR</span><span class="si">}</span><span class="s2">does not exist</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="k">fi</span>
 
 <span class="c1">#/etc/securetty</span>
-<span class="k">if</span> <span class="o">[</span> -e <span class="s2">"/etc/securetty"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="k">if</span> <span class="o">[</span> -e <span class="s2">&quot;/etc/securetty&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
                 sudo chown root:root /etc/securetty
                 sudo chmod <span class="m">0600</span> /etc/securetty
-                <span class="nb">echo</span> -e <span class="s2">"/etc/securetty - </span><span class="si">${</span><span class="nv">LG</span><span class="si">}</span><span class="s2">done </span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">"</span>
+                <span class="nb">echo</span> -e <span class="s2">&quot;/etc/securetty - </span><span class="si">${</span><span class="nv">LG</span><span class="si">}</span><span class="s2">done </span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span>
         <span class="k">else</span>
-                <span class="nb">echo</span> -e <span class="s2">"/etc/securetty - </span><span class="si">${</span><span class="nv">LR</span><span class="si">}</span><span class="s2">does not exist</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">"</span>
+                <span class="nb">echo</span> -e <span class="s2">&quot;/etc/securetty - </span><span class="si">${</span><span class="nv">LR</span><span class="si">}</span><span class="s2">does not exist</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="k">fi</span>
 </pre></div>
 
@@ -925,8 +932,7 @@ sudo apt-get install --only-upgrade firefox
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Updating a Repository</p>
 
@@ -944,11 +950,11 @@ sudo apt-get install --only-upgrade firefox
 
 <span class="c1"># After any changes are made:</span>
 
-<span class="nb">echo</span> <span class="s2">"What is the commit message?"</span>
+<span class="nb">echo</span> <span class="s2">&quot;What is the commit message?&quot;</span>
 
 <span class="nb">read</span> message
 
-git commit -m <span class="s2">"</span><span class="nv">$message</span><span class="s2">"</span>
+git commit -m <span class="s2">&quot;</span><span class="nv">$message</span><span class="s2">&quot;</span>
 
 git push origin master
 </pre></div>
@@ -980,13 +986,47 @@ What is the commit message?
 
 
 
-  </div><!-- from https://github.com/utterance/utterances -->
-<script src="https://utteranc.es/client.js"
-        repo="aaravarora01/AaravArora-APCSA-Fastpages"
-        issue-term="title"
-        label="blogpost-comment"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script><a class="u-url" href="/AaravArora-APCSA-Fastpages/jupyter/collegeboard%20learning/2022/08/28/bash_hacks.html" hidden></a>
-</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/AaravArora-APCSA-Fastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/AaravArora-APCSA-Fastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/exampleUser" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/AaravArora-APCSA-Fastpages/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://twitter.com/exampleUser" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/AaravArora-APCSA-Fastpages/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
