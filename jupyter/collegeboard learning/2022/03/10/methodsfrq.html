@@ -79,6 +79,126 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A music Web site keeps track of downloaded music. For each download, the site uses a DownloadInfo
+object to store a song's title and the number of times it has been downloaded. A partial declaration for the
+DownloadInfo class is shown below.
+public class DownloadInfo
+{
+ /** Creates a new instance with the given unique title and sets the</p>
+<ul>
+<li>number of times downloaded to 1.</li>
+<li><p>@param title the unique title of the downloaded song
+<em>/
+public DownloadInfo(String title)
+{ /</em> implementation not shown <em>/ }
+/** @return the title </em>/
+public String getTitle()
+{ /<em> implementation not shown </em>/ }</p>
+<p>/*<em> Increment the number times downloaded by 1 </em>/
+public void incrementTimesDownloaded()
+{ /<em> implementation not shown </em>/ }
+// There may be instance variables, constructors, and methods that are not shown.
+}</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(a) Write the MusicDownloads method getDownloadInfo, which returns a reference to a
+DownloadInfo object if an object with a title that matches the parameter title exists in the
+downloadList. If no song in downloadList has a title that matches the parameter title, the
+method returns null.
+ For example, suppose variable webMusicA refers to an instance of MusicDownloads and that the
+table below represents the contents of downloadList. The list contains three DownloadInfo
+objects. The object at position 0 has a title of "Hey Jude" and a download count of 5. The object at position 1
+has a title of "Soul Sister" and a download count of 3. The object at position 2 has a title of "Aqualung" and
+a download count of 10.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="n">DownloadInfo</span> <span class="nf">getDownloadInfo</span><span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// for loop for all the different information in the download list</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">DownloadInfo</span> <span class="n">info</span> <span class="p">:</span> <span class="n">downloadList</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// if the title gotten is equal to the actual gotten, return the information of the music</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="na">getTitle</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">title</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">info</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">// otherwise return null since nothing matched</span>
+    <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Write the MusicDownloads method updateDownloads, which takes a list of song titles as a
+parameter. For each title in the list, the method updates downloadList, either by incrementing the
+download count if a DownloadInfo object with the same title exists, or by adding a new
+DownloadInfo object with that title and a download count of 1 to the end of the list. When a new
+DownloadInfo object is added to the end of the list, the order of the already existing entries in
+downloadList remains unchanged.
+ For example, suppose variable webMusicB refers to an instance of MusicDownloads and that the
+table below represents the contents of the instance variable downloadList</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">updateDownloads</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">titles</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// uses an array list data type here</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">title</span> <span class="p">:</span> <span class="n">titles</span><span class="p">){</span>
+        <span class="n">DownloadInfo</span> <span class="n">foundInfo</span> <span class="o">=</span> <span class="n">getDownloadInfo</span><span class="p">(</span><span class="n">title</span><span class="p">);</span>
+        <span class="c1">// if the found info is null from the previous part, add the information from the download info</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">foundInfo</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">downloadList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">DownloadInfo</span><span class="p">(</span><span class="n">title</span><span class="p">));</span>
+        <span class="p">}</span>
+        <span class="c1">// otherwise use it from found info</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="n">foundInfo</span><span class="p">.</span><span class="na">incrementTimesDownloaded</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The FRQ answer relies on multiple data types, since we are either using strings or array lists to store multiple Strings. We know that we have to use strings since all of the music titles are in letters and we can store all of them in multiple strings. When using for loops, it's easier to iterate through each item in the array list using a for loop to then put into an if loop that can check for the required conditions.</p>
+
+</div>
+</div>
+</div>
 </div>
 
 
