@@ -20,3 +20,4 @@ author: Aarav Arora
 - Internship opportunities which you can find through clubs, campus events, Google, get opportunities by emailing others
 - Avoid unpaid internships, apply even if you feel underqualified, ask faculty members for help with applications, go to the writing center on campus for help with application essays
 - Internship applications are very important
+- CSUSM Programs: Summer Scholars Program, Quantum Bridge Program, Chemistry and Biochemistry Targeted Learning Community Program
