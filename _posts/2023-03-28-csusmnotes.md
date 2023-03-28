@@ -13,4 +13,4 @@ author: Aarav Arora
 - Both had tough times in high school and college but still found success in later life
 - John: from San Diego, went to Palomar College, took 6 years to get a master's degree
 - Computer science has applicability to other parts of life and other things you work on 
-- 
+- Talks of creating a new science building for CS/Science at CSUSM
