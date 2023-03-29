@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Notes/Reflection from Session
-categories: [markdown, CollegeBoard Learning]
+categories: [markdown]
 title: Notes/Reflection for CSU San Marcos Session
 author: Aarav Arora
 ---
