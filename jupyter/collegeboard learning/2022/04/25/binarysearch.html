@@ -88,23 +88,29 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Recursive</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">binSearch</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">array</span><span class="p">,</span> <span class="kt">int</span> <span class="n">key</span><span class="p">,</span> <span class="kt">int</span> <span class="n">low</span><span class="p">,</span> <span class="kt">int</span> <span class="n">high</span><span class="p">)</span> <span class="p">{</span>
-
+        <span class="c1">// if the lowest integer is greater than the highest integer, return -1 because the array is unsorted</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">low</span> <span class="o">&gt;</span> <span class="n">high</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
         <span class="p">}</span>
+        <span class="c1">// get the middle index</span>
         <span class="kt">int</span> <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="c1">// find what number is at the middle of the array, check if it&#39;s equal to the key</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="n">middle</span><span class="o">]</span> <span class="o">==</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">return</span> <span class="n">middle</span><span class="p">;</span>
         <span class="p">}</span> 
+        <span class="c1">// if the integer at the middle index is less than the key, do binary search again but increase middle by 1</span>
         <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="n">middle</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">return</span> <span class="n">binSearch</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">middle</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="p">);</span>
         <span class="p">}</span> 
+        <span class="c1">// if the integer at the middle index is greater than the key, do binary search again but decrease middle by 1</span>
         <span class="k">else</span> <span class="p">{</span>
             <span class="k">return</span> <span class="n">binSearch</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">middle</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
+    <span class="c1">// main method to test the binarysearch on the given array for the number 45</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="kt">int</span> <span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">67</span><span class="p">};</span>
+        <span class="c1">// print out what the index is, if -1, the array was not sorted or the key was not found</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Index of 45 is &quot;</span> <span class="o">+</span> <span class="n">binSearch</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">));</span>
     <span class="p">}</span>
 <span class="p">}</span>
