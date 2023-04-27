@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Title",
+            "title": "Merge Sort",
             "content": "public class StringMergeSort { public static void mergeSort(String[] arr) { if (arr.length &lt; 2) { return; } int middle = arr.length / 2; String[] left = new String[middle]; String[] right = new String[arr.length - middle]; for (int i = 0; i &lt; middle; i++) { left[i] = arr[i]; } for (int i = middle; i &lt; arr.length; i++) { right[i - middle] = arr[i]; } mergeSort(left); mergeSort(right); merge(arr, left, right); } public static void merge(String[] arr, String[] left, String[] right) { int i = 0, j = 0, k = 0; while (i &lt; left.length &amp;&amp; j &lt; right.length) { if (left[i].compareTo(right[j]) &lt; 0) { arr[k++] = left[i++]; } else { arr[k++] = right[j++]; } } while (i &lt; left.length) { arr[k++] = left[i++]; } while (j &lt; right.length) { arr[k++] = right[j++]; } } public static void main(String[] args) { String[] arr = {&quot;ball&quot;, &quot;apple&quot;, &quot;cat&quot;, &quot;dog&quot;}; mergeSort(arr); System.out.println(Arrays.toString(arr)); } } StringMergeSort.main(null); . [apple, ball, cat, dog] .",
-            "url": "https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/2023/04/25/mergesort.html",
-            "relUrl": "/2023/04/25/mergesort.html",
+            "url": "https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/jupyter/collegeboard%20learning/2023/04/25/mergesort.html",
+            "relUrl": "/jupyter/collegeboard%20learning/2023/04/25/mergesort.html",
             "date": " • Apr 25, 2023"
         }
         
