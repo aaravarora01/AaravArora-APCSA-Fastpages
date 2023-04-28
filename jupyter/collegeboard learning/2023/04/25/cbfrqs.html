@@ -92,35 +92,74 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// Part A</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getCheck</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">digits</span> <span class="o">=</span> <span class="n">getNumberOfDigits</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
-    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">digits</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">currentDig</span> <span class="o">=</span> <span class="n">getDigit</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
-        <span class="kt">int</span> <span class="n">currentDig</span> <span class="o">=</span> <span class="n">currentDig</span> <span class="o">*</span> <span class="p">(</span><span class="mi">7</span> <span class="o">-</span> <span class="n">i</span><span class="p">);</span>
-        <span class="n">sum</span> <span class="o">+=</span> <span class="n">currentDig</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="kt">int</span> <span class="n">digitsInSum</span> <span class="o">=</span> <span class="n">getNumberOfDigits</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">getDigit</span><span class="p">(</span><span class="n">sum</span><span class="p">,</span> <span class="n">digitsInSum</span><span class="p">));</span>
-<span class="p">}</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">FRQ1</span> <span class="p">{</span>
 
-<span class="c1">// Part B</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isValid</span><span class="p">(</span><span class="kt">int</span> <span class="n">numWithCheckDigit</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">check</span> <span class="o">=</span> <span class="n">numWithCheckDigit</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">numToCheck</span> <span class="o">=</span> <span class="n">numWithCheckDigit</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
-    <span class="n">numWithCheckDigit</span> <span class="o">=</span> <span class="n">numWithCheckDigit</span> <span class="o">-</span> <span class="n">check</span><span class="p">;</span>
-    <span class="n">numWithCheckDigit</span> <span class="o">=</span> <span class="n">numWithCheckDigit</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">check</span> <span class="o">==</span> <span class="n">getCheck</span><span class="p">(</span><span class="n">numToCheck</span><span class="p">))</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getNumberOfDigits</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">num</span><span class="p">).</span><span class="na">length</span><span class="p">();</span>
+        <span class="k">return</span> <span class="n">length</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="k">else</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getDigit</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">String</span> <span class="n">numStr</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>        
+        <span class="kt">char</span> <span class="n">digitChar</span> <span class="o">=</span> <span class="n">numStr</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">digit</span> <span class="o">=</span> <span class="n">Character</span><span class="p">.</span><span class="na">getNumericValue</span><span class="p">(</span><span class="n">digitChar</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">digit</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Part A</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getCheck</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">digits</span> <span class="o">=</span> <span class="n">getNumberOfDigits</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">digits</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">currentDig</span> <span class="o">=</span> <span class="n">getDigit</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+            <span class="n">currentDig</span> <span class="o">=</span> <span class="n">currentDig</span> <span class="o">*</span> <span class="p">(</span><span class="mi">8</span> <span class="o">-</span> <span class="n">i</span><span class="p">);</span>
+            <span class="n">sum</span> <span class="o">+=</span> <span class="n">currentDig</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="kt">int</span> <span class="n">digitsInSum</span> <span class="o">=</span> <span class="n">getNumberOfDigits</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span>
+        <span class="k">return</span><span class="p">(</span><span class="n">getDigit</span><span class="p">(</span><span class="n">sum</span><span class="p">,</span> <span class="n">digitsInSum</span><span class="p">));</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// Part B</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isValid</span><span class="p">(</span><span class="kt">int</span> <span class="n">numWithCheckDigit</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">check</span> <span class="o">=</span> <span class="n">numWithCheckDigit</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">numToCheck</span> <span class="o">=</span> <span class="n">numWithCheckDigit</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="n">numWithCheckDigit</span> <span class="o">=</span> <span class="n">numWithCheckDigit</span> <span class="o">-</span> <span class="n">check</span><span class="p">;</span>
+        <span class="n">numWithCheckDigit</span> <span class="o">=</span> <span class="n">numWithCheckDigit</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">check</span> <span class="o">==</span> <span class="n">getCheck</span><span class="p">(</span><span class="n">numToCheck</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">1234567</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">check1</span> <span class="o">=</span> <span class="n">getCheck</span><span class="p">(</span><span class="n">num1</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Check digit for &quot;</span> <span class="o">+</span> <span class="n">num1</span> <span class="o">+</span> <span class="s">&quot; is &quot;</span> <span class="o">+</span> <span class="n">check1</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">numWithCheck1</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">check1</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numWithCheck1</span> <span class="o">+</span> <span class="s">&quot; is valid: &quot;</span> <span class="o">+</span> <span class="n">isValid</span><span class="p">(</span><span class="n">numWithCheck1</span><span class="p">));</span>
     <span class="p">}</span>
 <span class="p">}</span>
+<span class="n">FRQ1</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Check digit for 1234567 is 4
+12345674 is valid: true
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -150,7 +189,7 @@ window.onload = wrap_img;
         <span class="n">add</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">next</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">next</span><span class="p">()</span> <span class="p">{</span>
         <span class="n">currentNum</span> <span class="o">+=</span> <span class="n">add</span><span class="p">;</span>
     <span class="p">}</span>
 
@@ -162,12 +201,49 @@ window.onload = wrap_img;
         <span class="k">if</span> <span class="p">(</span><span class="n">currentNum</span> <span class="o">!=</span> <span class="n">startNum</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">currentNum</span> <span class="o">-=</span> <span class="n">add</span><span class="p">;</span>
         <span class="p">}</span>
+        <span class="k">return</span> <span class="n">currentNum</span><span class="p">;</span>
     <span class="p">}</span>
-    
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">AdditionPattern</span> <span class="n">pattern</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AdditionPattern</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+        
+        <span class="kt">int</span> <span class="n">currentNumber</span> <span class="o">=</span> <span class="n">pattern</span><span class="p">.</span><span class="na">currentNumber</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Current number: &quot;</span> <span class="o">+</span> <span class="n">currentNumber</span><span class="p">);</span> <span class="c1">// Expected output: 0</span>
+        
+        <span class="n">pattern</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+        <span class="n">currentNumber</span> <span class="o">=</span> <span class="n">pattern</span><span class="p">.</span><span class="na">currentNumber</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Current number: &quot;</span> <span class="o">+</span> <span class="n">currentNumber</span><span class="p">);</span> <span class="c1">// Expected output: 2</span>
+        
+        <span class="n">pattern</span><span class="p">.</span><span class="na">prev</span><span class="p">();</span>
+        <span class="n">currentNumber</span> <span class="o">=</span> <span class="n">pattern</span><span class="p">.</span><span class="na">currentNumber</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Current number: &quot;</span> <span class="o">+</span> <span class="n">currentNumber</span><span class="p">);</span> <span class="c1">// Expected output: 0</span>
+        
+        <span class="n">pattern</span><span class="p">.</span><span class="na">prev</span><span class="p">();</span>
+        <span class="n">currentNumber</span> <span class="o">=</span> <span class="n">pattern</span><span class="p">.</span><span class="na">currentNumber</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Current number: &quot;</span> <span class="o">+</span> <span class="n">currentNumber</span><span class="p">);</span> <span class="c1">// Expected output: 0</span>
+    <span class="p">}</span>
 <span class="p">}</span>
+<span class="n">AdditionPattern</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Current number: 0
+Current number: 2
+Current number: 0
+Current number: 0
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
