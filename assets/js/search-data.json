@@ -489,17 +489,6 @@
   
 
   
-      ,"page1": {
-          "title": "About Me",
-          "content": "This website is powered by fastpages 1. . I am 16 years old. . I am excited to pursue new hobbies like programming. . I am really excited to be in AP CSA. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
-          "url": "https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/about/",
-          "relUrl": "/about/",
-          "date": ""
-      }
-      
-  
-
-  
 
   
 
@@ -530,7 +519,7 @@
   
 
   
-      ,"page14": {
+      ,"page13": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/robots.txt",
