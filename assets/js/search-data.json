@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "AP CSA 2023 FRQ Questions 3 and 4",
-            "content": "// Question 3A public void cleanData(double lower, double upper) { for (int i = 0; i &lt; temperatures.size(); i++) { if (temperatures.get(i) &gt; upper || temperatures.get(i) &lt; lower) { temperatures.remove(i); i--; } } } // Question 3B public int longestHeatWave(double threshold) { int current = 0; int max = 0; for (int i = 0; i &lt; temperatures.size(); i++) { if (temperatures.get(i) &gt; threshold) { current++; if (current &gt; max) { max = current; } } else { current = 0; } } return max; } . // Question 4A public boolean moveCandyToFirstRow(int col) { if (box[0][col] != null) { return true; } else { for (int i = 0; i &lt; box.length; i++) { if (box[i][col] != null) { box[0][col] = box[i][col]; box[i][col] = null; return true; } } } return false; } // Question 4B public Candy removeNextByFlavor(String flavor) { for (int row = box.length - 1; row &gt;= 0; row--) { for (int col = 0; col &lt; box[0].length; col++) { Candy c = box[row][col]; if (c != null) { if (c.getFlavor().equals(flavor)) { box[row][col] = null; return c; } } } } return null; } .",
+            "content": "// Question 3A public void cleanData(double lower, double upper) { // Iterates through each element in the temperatures for (int i = 0; i &lt; temperatures.size(); i++) { // Checks if the temperature is outside the boundaries if (temperatures.get(i) &gt; upper || temperatures.get(i) &lt; lower) { // Remove the element from temperatures temperatures.remove(i); // Goes back one index to avoid off by one error i--; } } } // Question 3B public int longestHeatWave(double threshold) { // Creates variables for current heatwave length and maximum heatwave length int current = 0; int max = 0; // Iterates through each element in temperatures for (int i = 0; i &lt; temperatures.size(); i++) { // If the temperature is greater than the threshold if (temperatures.get(i) &gt; threshold) { // Add one to the current heatwave length current++; // If the length of the current heatwave is greater than the maximum heatwave, set the current heatwave to the maximum value if (current &gt; max) { max = current; } } // If the temperature is less than the threshold, the heatwave has ended so set the current heatwave length to 0 else { current = 0; } } // Return the length of the longest heatwave return max; } . // Question 4A public boolean moveCandyToFirstRow(int col) { // Checks if the first row already has a candy if (box[0][col] != null) { return true; } else { // If there is no candy, check each row for a candy for (int i = 0; i &lt; box.length; i++) { // If there is a candy in the row, move it to the first row and remove it from row i and return true if (box[i][col] != null) { box[0][col] = box[i][col]; box[i][col] = null; return true; } } } // If no candy is found in every row of the given column, return false return false; } // Question 4B public Candy removeNextByFlavor(String flavor) { // Iterate through each element by starting at the bottom left for (int row = box.length - 1; row &gt;= 0; row--) { for (int col = 0; col &lt; box[0].length; col++) { // Store the candy in a variable called c Candy c = box[row][col]; // If a candy exists and its flavor equals the given flavor, remove the candy and return it if (c != null) { if (c.getFlavor().equals(flavor)) { box[row][col] = null; return c; } } } } // If no candy has a matching flavor, return null return null; } .",
             "url": "https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/jupyter/collegeboard%20learning/2023/05/05/apfrq.html",
             "relUrl": "/jupyter/collegeboard%20learning/2023/05/05/apfrq.html",
             "date": " • May 5, 2023"
@@ -514,8 +514,6 @@
   
 
   
-
-  
   
 
   
@@ -532,7 +530,7 @@
   
 
   
-      ,"page15": {
+      ,"page14": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/robots.txt",
