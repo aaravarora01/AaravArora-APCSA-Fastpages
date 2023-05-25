@@ -66,5 +66,4 @@ The following table contains a sample code execution sequence and the correspond
 | c.phoneRefund(5);                       | 109                                | The amount of phones remaining is returned and the down payment stays the same because 5 or less phones are refunded.                                                                                                                        |
 
 
-
 Write the complete Company class, including the constructor and any required instance variables and methods. Your implementation must meet all specifications and conform to the example.
