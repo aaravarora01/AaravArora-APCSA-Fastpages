@@ -27,6 +27,7 @@ public class Sum {
 Write the ``getEvenSum`` method which returns the sum of all even integers between 1 and ``endInt``. ``endInt`` will always be greater than or equal to 1. 
 
 The following is an example of the getEvenSum method:
+
 | endInt | getEvenSum return value |
 |--------|-------------------------|
 | 3      | 2                       |
