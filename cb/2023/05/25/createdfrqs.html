@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -155,6 +155,63 @@ window.onload = wrap_img;
 </ul>
 
 <p>The following table contains a sample code execution sequence and the corresponding results.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Statements and Expression</th>
+      <th>Value Returned (blank if no value)</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Company c = new Company(50, 100, 6, 20)</td>
+      <td> </td>
+      <td>The first parameter is the down payment of the phone, the second parameter is the monthly cost, the third parameter is the amount of months of payment, and the fourth parameter is the stock of phones. Assume all parameters are positive.</td>
+    </tr>
+    <tr>
+      <td>c.getTotalCost();</td>
+      <td>650.00</td>
+      <td>The total cost is calculated by adding the phone’s down payment to the total monthly costs.</td>
+    </tr>
+    <tr>
+      <td>c.setPhones(2);</td>
+      <td> </td>
+      <td>The amount of phones increases by 2.</td>
+    </tr>
+    <tr>
+      <td>c.getPhones();</td>
+      <td>102</td>
+      <td>The amount of phones remaining is returned.</td>
+    </tr>
+    <tr>
+      <td>c.setPhones(-5);</td>
+      <td> </td>
+      <td>The amount of phones decreases by 5.</td>
+    </tr>
+    <tr>
+      <td>c.getPhones();</td>
+      <td>97</td>
+      <td>The amount of phones remaining is returned.</td>
+    </tr>
+    <tr>
+      <td>c.phoneRefund(6);</td>
+      <td>103</td>
+      <td>The amount of phones remaining is returned and the down payment for a phone increases by 10 * amount of phones refunded, if more than 5 phones are refunded. In this case, the down payment would increase to $110.</td>
+    </tr>
+    <tr>
+      <td>c.phoneRefund(1);</td>
+      <td>104</td>
+      <td>The amount of phones remaining is returned and the down payment stays the same because less than 5 phones are refunded.</td>
+    </tr>
+    <tr>
+      <td>c.phoneRefund(5);</td>
+      <td>109</td>
+      <td>The amount of phones remaining is returned and the down payment stays the same because 5 or less phones are refunded.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Write the complete Company class, including the constructor and any required instance variables and methods. Your implementation must meet all specifications and conform to the example.</p>
 
