@@ -7,7 +7,7 @@ title: Methods and Class FRQ
 author: Aarav Arora
 ---
 
-## Methods FRQ
+## Calculating Sums FRQ
 This question involves calculating the sum of a given set of integers. In this question, you will be required to write two methods of the ``Sum`` class.
 
 ```java
@@ -23,7 +23,7 @@ public class Sum {
 }
 ```
 
-### Methods FRQ Part A
+### Calculating Sums FRQ Part A
 Write the ``getEvenSum`` method which returns the sum of all even integers between 1 and ``endInt``. ``endInt`` will always be greater than or equal to 1. 
 
 The following is an example of the getEvenSum method.
@@ -37,13 +37,13 @@ The following is an example of the getEvenSum method.
 
 Write the code below.
 
-### Methods FRQ Part B
+### Calculating Sums FRQ Part B
 Write the ``sumComparison`` method which returns true if the return value of ``getEvenSum`` is greater than a randomly generated value. The randomly generated value must be divisible by 3 and 4 and be between 1 and max, inclusive. If the return value of getEvenSum is equal to or less than the randomly generated value, return false.
 
 Write the code below.
 
 
-## Class FRQ
+## Cellphone Company FRQ
 This question involves the implementation of the ``Company`` class which represents a single company’s cellphone phone availability and prices.
 
 The ``Company`` class provides a constructor and the following methods:
