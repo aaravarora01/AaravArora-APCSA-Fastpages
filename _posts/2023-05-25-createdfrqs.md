@@ -3,7 +3,7 @@ toc: true
 layout: post
 description: Created Methods and Class FRQ
 categories: [cb]
-title: 2023 FRQs
+title: Methods and Class FRQ
 author: Aarav Arora
 ---
 
