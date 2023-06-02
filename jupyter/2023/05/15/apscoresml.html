@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Creating and Training a Simple Machine Learning Model | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Creating and Training a Simple Machine Learning Model" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AP Scores Decision Tree for Classification" />
+<meta property="og:description" content="AP Scores Decision Tree for Classification" />
+<link rel="canonical" href="https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/jupyter/2023/05/15/apscoresml.html" />
+<meta property="og:url" content="https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/jupyter/2023/05/15/apscoresml.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-05-15T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Creating and Training a Simple Machine Learning Model" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-05-15T00:00:00-05:00","datePublished":"2023-05-15T00:00:00-05:00","description":"AP Scores Decision Tree for Classification","headline":"Creating and Training a Simple Machine Learning Model","mainEntityOfPage":{"@type":"WebPage","@id":"https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/jupyter/2023/05/15/apscoresml.html"},"url":"https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/jupyter/2023/05/15/apscoresml.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/AaravArora-APCSA-Fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/AaravArora-APCSA-Fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/AaravArora-APCSA-Fastpages/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/AaravArora-APCSA-Fastpages/calculator/">Calculator</a><a class="page-link" href="/AaravArora-APCSA-Fastpages/search/">Search</a><a class="page-link" href="/AaravArora-APCSA-Fastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-05-15-apscoresml.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Training-and-Testing-ML-Model">Training and Testing ML Model<a class="anchor-link" href="#Training-and-Testing-ML-Model"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Before starting anything else, we need to import libraries that we will use for training our model. The pandas library and sklearn libraries are important and are used for the actual training of the model. The matplot library is used for visualizing our model and determining how successful it is.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We need to import the file that contains our training data. In this case, it is in the same directory as the Jupyter notebook and is called apscores.csv</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;apscores.csv&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The csv file is formatted as such:</p>
+<table>
+<thead><tr>
+<th>UserID</th>
+<th>FRQ1</th>
+<th>FRQ2</th>
+<th>FRQ3</th>
+<th>APScore</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>Score</td>
+<td>Score</td>
+<td>Score</td>
+<td>Score</td>
+</tr>
+<tr>
+<td>02</td>
+<td>Score</td>
+<td>Score</td>
+<td>Score</td>
+<td>Score</td>
+</tr>
+<tr>
+<td>03</td>
+<td>Score</td>
+<td>Score</td>
+<td>Score</td>
+<td>Score</td>
+</tr>
+</tbody>
+</table>
+<p>Thus, below we are setting the FRQ scores on the X and the AP Score on the y since we want to predict what AP Score someone will get based on their FRQ score.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>  <span class="c1"># 2nd to 4th columns are the scores on different FRQs</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">4</span><span class="p">]</span>    <span class="c1"># 5th column as ap scores to classify</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This splits up the data into training and testing data. Setting the test size equal to 0.2 means that the data is split into both training data and testing data. 80% of the data is used for training the model and the remaining 20% is used to test the accuracy of the model. The random_state variable is randomly chosen and doesn't matter what the number is.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, we are using the DecisionTreeClassifier with sklearn and training the classifier with the training data that was assigned above.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">()</span>
+<span class="c1"># Train the classifier</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>DecisionTreeClassifier()</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>After the model has been trained, we can stop there and have a functioning model. However, it is important to test the accuracy of the model. We use the data from the remaining 20% and classify it with the decision tree created above. The accuracy is 95% so we don't have to make many adjustments, if any.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="c1"># Calculate the accuracy of the model</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy:&quot;</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Accuracy: 0.95
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, we are creating a function to predict the score using the created model. The function returns the predicted score from the function.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">predict_score</span><span class="p">(</span><span class="n">attribute1</span><span class="p">,</span> <span class="n">attribute2</span><span class="p">,</span> <span class="n">attribute3</span><span class="p">):</span>
+    <span class="c1"># Create a DataFrame with the input values</span>
+    <span class="n">input_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="n">attribute1</span><span class="p">,</span> <span class="n">attribute2</span><span class="p">,</span> <span class="n">attribute3</span><span class="p">]])</span>
+
+    <span class="c1"># Use the trained classifier to make predictions on the input data</span>
+    <span class="n">prediction</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">input_data</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">prediction</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Finally, we are using the predict_score function to test what score someone will get based on their 3 FRQ scores. This function was incorporated into our website later.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">attribute1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">attribute2</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">attribute3</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">predicted_score</span> <span class="o">=</span> <span class="n">predict_score</span><span class="p">(</span><span class="n">attribute1</span><span class="p">,</span> <span class="n">attribute2</span><span class="p">,</span> <span class="n">attribute3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predicted Score:&quot;</span><span class="p">,</span> <span class="n">predicted_score</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Predicted Score: 1
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/aarav/anaconda3/lib/python3.9/site-packages/sklearn/base.py:450: UserWarning: X does not have valid feature names, but DecisionTreeClassifier was fitted with feature names
+  warnings.warn(
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">attribute1</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="n">attribute2</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">attribute3</span> <span class="o">=</span> <span class="mi">9</span>
+
+<span class="n">predicted_score</span> <span class="o">=</span> <span class="n">predict_score</span><span class="p">(</span><span class="n">attribute1</span><span class="p">,</span> <span class="n">attribute2</span><span class="p">,</span> <span class="n">attribute3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predicted Score:&quot;</span><span class="p">,</span> <span class="n">predicted_score</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Predicted Score: 5
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/aarav/anaconda3/lib/python3.9/site-packages/sklearn/base.py:450: UserWarning: X does not have valid feature names, but DecisionTreeClassifier was fitted with feature names
+  warnings.warn(
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Finally, we are plotting the model on an accuracy plot to see whether or not specific test cases were accurately classified. We can see which test cases were inaccurate. In this situation, our model predicted that someone would get an AP score of 5, when they actually got an AP score of 5 in the training data given.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_test</span><span class="p">)),</span> <span class="n">y_test</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Actual&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_pred</span><span class="p">)),</span> <span class="n">y_pred</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Predicted&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Sample Index&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Class&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Actual vs. Predicted&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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" />
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/AaravArora-APCSA-Fastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/AaravArora-APCSA-Fastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/exampleUser" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/AaravArora-APCSA-Fastpages/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://twitter.com/exampleUser" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/AaravArora-APCSA-Fastpages/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
